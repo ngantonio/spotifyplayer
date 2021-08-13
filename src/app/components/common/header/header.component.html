@@ -1,1 +1,11 @@
-<p>header works!</p>
+<div class="header">
+  <div class="header__left">
+    <span class="material-icons">search</span>
+    <input type="text" placeholder="Search for Artists, Songs, or podcasts">
+
+  </div>
+  <div class="header__right">
+    <img class="user__photo" [src]="userImage" alt="">
+    <h4>{{ username }}</h4>
+  </div>
+</div>

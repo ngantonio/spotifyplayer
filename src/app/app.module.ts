@@ -9,6 +9,8 @@ import { FooterComponent } from './components/common/footer/footer.component';
 import { PlayerComponent } from './components/player/player.component';
 import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatIconModule } from '@angular/material/icon';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations'
 
 
 @NgModule({
@@ -18,12 +20,14 @@ import { HttpClientModule } from '@angular/common/http';
     SidebarComponent,
     FooterComponent,
     PlayerComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NoopAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

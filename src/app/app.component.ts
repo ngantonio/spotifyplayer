@@ -17,12 +17,12 @@ export class AppComponent implements OnInit {
     const access_token = this.spotifyHandlerService.authentication();
     if (access_token && access_token !== "") {
       this.isAuth = true;
-      this.spotifyHandlerService.spotifyClient.getMe()
+      /*this.spotifyHandlerService.spotifyClient.getMe()
         .then((res: any) => {
           console.log(res)
         }).catch((err: any) => {
           console.log(err)
-        })
+        })*/
 
     } else {
       this.isAuth = false;

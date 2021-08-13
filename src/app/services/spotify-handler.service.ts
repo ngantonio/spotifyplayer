@@ -34,6 +34,7 @@ export class SpotifyHandlerService {
     return this.spotify_client;
   }
 
+
   authentication(): string {
 
     let spotify_token = sessionStorage.getItem('spotify_token')
@@ -55,6 +56,7 @@ export class SpotifyHandlerService {
           return initial;
         }, {});
         sessionStorage.setItem("spotify_token", JSON.stringify(this.token));
+        this.initializeClient()
         window.location.hash = "";
         return this.token.access_token
       } else {
@@ -66,7 +68,6 @@ export class SpotifyHandlerService {
 
   initializeClient(): void {
     this.spotifyClient.setAccessToken(this.token.access_token)
-
   }
 
 }
