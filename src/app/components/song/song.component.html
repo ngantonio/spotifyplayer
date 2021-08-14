@@ -1,0 +1,10 @@
+<div class="songRow">
+  <figure>
+    <img loading="lazy" decoding="async" [src]="track.album.images[0].url" [alt]="track.album.name"
+      class="songRow__album" />
+  </figure>
+  <div class="songRow__info">
+    <h1> {{ track.name }}</h1>
+    <p> {{ artists }} </p>
+  </div>
+</div>

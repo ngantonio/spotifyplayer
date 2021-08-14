@@ -27,7 +27,7 @@
   <hr>
 
   <div class="sidebar__option" *ngFor="let playlist of playlists">
-    <p>{{ playlist.name }}</p>
+    <p (click)="selectPlaylist(playlist)">{{ playlist.name }}</p>
   </div>
 
 

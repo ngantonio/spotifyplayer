@@ -10,7 +10,8 @@ import { PlayerComponent } from './components/player/player.component';
 import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations'
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { SongComponent } from './components/song/song.component'
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations'
     FooterComponent,
     PlayerComponent,
     LoginComponent,
+    SongComponent,
   ],
   imports: [
     BrowserModule,

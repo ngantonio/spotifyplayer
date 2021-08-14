@@ -1,24 +1,26 @@
 <div class="footer">
   <div class="footer__left">
-    <img class="footer__albumLogo"
-      src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/artistic-album-cover-design-template-d12ef0296af80b58363dc0deef077ecc_screen.jpg?ts=1561488440"
-      alt="">
+
+    <img loading="lazy" decoding="async" [src]="spotifyHandlerService?.currentSong.track.album.images[0].url"
+      [alt]="spotifyHandlerService?.currentSong.track.album.name" class="footer__albumLogo" />
+
+
     <div class="footer__songInfo">
-      <h4>Yeah!</h4>
-      <p>User</p>
+      <h4>{{ spotifyHandlerService?.currentSong.track.name }}</h4>
+      <p>{{ spotifyHandlerService?.currentSong.procesedArtists}}</p>
     </div>
   </div>
 
   <div class="footer__center">
-    <span class="material-icons footer__green">shuffle</span>
+    <!--span class="material-icons footer__green">shuffle</span-->
     <span class="material-icons footer__icon">skip_previous</span>
     <span class="material-icons footer__icon play">play_circle_filled</span>
     <span class="material-icons footer__icon">skip_next</span>
-    <span class="material-icons footer__green">replay</span>
+    <!--span class="material-icons footer__green">replay</span-->
 
   </div>
   <div class="footer__right">
-    <p>Volume controls</p>
+    <p></p>
   </div>
 
 </div>

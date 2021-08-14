@@ -25,4 +25,15 @@ export class SidebarComponent implements OnInit {
       })
   }
 
+  async selectPlaylist(playlist: any): Promise<void> {
+    await this.spotifyHandlerService.spotifyClient.getPlaylist(playlist.id)
+      .then((playlist) => {
+        this.spotifyHandlerService.setCurrentPlaylist(playlist)
+        let firstSong: any = playlist.tracks.items[0];
+        firstSong.procesedArtists = `${firstSong.track.artists.map((artist: any) => artist.name).join(", ")} - ${firstSong.track.album.name}`
+        this.spotifyHandlerService.setCurrentSong(firstSong)
+      }).catch((err) => {
+        console.log(err)
+      })
+  }
 }

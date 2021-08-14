@@ -14,13 +14,3 @@
   src: url(/assets/fonts/Gotham-Font/Gotham-Bold.otf) format("opentype");
 
 }*/
-
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-body::-webkit-scrollbar {
-  display: none;
-}

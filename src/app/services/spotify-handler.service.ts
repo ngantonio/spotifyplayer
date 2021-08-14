@@ -24,6 +24,10 @@ export class SpotifyHandlerService {
   private token!: Token;
   private spotify_client = new SpotifyWebApi();
 
+  private current_playlist: any = [];
+  private current_song: any = [];
+
+
   constructor(private http: HttpClient) { }
 
   get login(): string {
@@ -34,6 +38,22 @@ export class SpotifyHandlerService {
     return this.spotify_client;
   }
 
+  get currentPlaylist(): any {
+
+    return this.current_playlist;
+  }
+
+  get currentSong(): any {
+    return this.current_song;
+  }
+
+  setCurrentPlaylist(playlist: any): void {
+    this.current_playlist = playlist;
+  }
+
+  setCurrentSong(song: any): void {
+    this.current_song = song;
+  }
 
   authentication(): string {
 

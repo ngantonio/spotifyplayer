@@ -3,7 +3,28 @@
     <app-sidebar></app-sidebar>
     <div class="body__container">
       <app-header></app-header>
-      <p>body works!</p>
+
+      <div class="body__info">
+        <img *ngIf="spotifyHandlerService.currentPlaylist.images"
+          [src]="spotifyHandlerService.currentPlaylist?.images[0]?.url" alt="">
+        <div class="body__infoText">
+          <strong>PLAYLIST</strong>
+          <h2>{{ spotifyHandlerService?.currentPlaylist?.name }}</h2>
+          <p>{{ spotifyHandlerService?.currentPlaylist?.description }}</p>
+        </div>
+      </div>
+
+      <div class="body__songs">
+        <div class="body__icons">
+          <span class="material-icons play body__shuffle">play_circle</span>
+          <span class="material-icons">favorite</span>
+          <span class="material-icons">more_horiz</span>
+        </div>
+
+        <app-song *ngFor="let song of spotifyHandlerService?.currentPlaylist?.tracks.items" [track]="song.track">
+        </app-song>
+
+      </div>
     </div>
   </div>
   <app-footer></app-footer>

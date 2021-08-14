@@ -1,6 +1,6 @@
 .sidebar{
   border: 1px solid black;
-  height: 100vh;
+  min-height: 100%;
   flex: 0.2;
   background-color: #040404;
   color: white;
