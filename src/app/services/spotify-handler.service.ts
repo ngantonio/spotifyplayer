@@ -19,8 +19,8 @@ export class SpotifyHandlerService {
     "user-top-read",
     "user-modify-playback-state",
   ]
-  private redirectUri = ' https://spotifywebplayer.netlify.app/';
-  // private redirectUri = 'http://localhost:4200/';
+  private redirectUri = 'https://spotifywebplayer.netlify.app/';
+  //private redirectUri = 'http://localhost:4200/';
   private loginUrl = `${this.authEndpoint}?client_id=${this.clientId}&redirect_uri=${this.redirectUri}&scopes=${this.scopes.join("%20")}&response_type=token&show_dialog=true`;
   private token!: Token;
   private spotify_client = new SpotifyWebApi();
